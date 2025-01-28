@@ -7,6 +7,12 @@ export default {
         primary: "#ffc001",
         secondary: "#ff9c01",
       },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+      },
+      animation: {
+        "spin-slow": "spin 40s linear infinite",
+      },
       container: {
         center: true,
         padding: {
