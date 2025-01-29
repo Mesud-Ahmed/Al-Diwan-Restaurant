@@ -1,6 +1,6 @@
 
-import BiryaniImg from "../assets/biryani2.png";
-
+import BiryaniImg from "../assets/biryani6.png";
+import { motion } from "framer-motion";
 import { GrSecure } from "react-icons/gr";
 import { IoFastFood } from "react-icons/io5";
 import { GiFoodTruck } from "react-icons/gi";
@@ -9,11 +9,13 @@ export default function Banner() {
 
     return (
         <>
-            <div className="min-h-[550px] dark:bg-gray-900">
+            <div className="min-h-[550px] dark:bg-gray-900 ">
 
-                <div
-                    data-aos="slide-up"
-                    data-aos-duration="300"
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }} // Starts invisible and moved down
+                    whileInView={{ opacity: 1, y: 0 }} // Becomes visible and slides up
+                    transition={{ duration: 0.5, ease: "easeOut" }} // Quick smooth animation
+                    viewport={{ once: true, amount: 0.2 }}
                     className="container">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {/* Image section */}
@@ -21,25 +23,19 @@ export default function Banner() {
                             <img
                                 src={BiryaniImg}
                                 alt="biryani img"
-                                className="max-w-[430px] w-full mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)]"
+                                className="max-w-[430px] max-h-[400px] w-full mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)]"
                             />
                         </div>
                         {/* text content section */}
                         <div className="flex flex-col justify-center gap-6 sm:pt-0">
-                            <h1 className="text-3xl sm:text-4xl font-bold dark:text-white">
-                                Lorem, ipsum dolor.
+                            <h1 className="text-3xl sm:text-4xl font-bold dark:text-white font-serif">
+                                🥘 Craving Something Delicious? Order Now! 🥘
                             </h1>
-                            <p className="text-sm text-gray-500 tracking-wide leading-5">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                Eaque reiciendis inventore iste ratione ex alias quis magni at
-                                optio
-                                <br />
-                                <br />
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Beatae ab sed, exercitationem minima aliquid eligendi
-                                distinctio? Fugit repudiandae numquam hic quo recusandae.
-                                Excepturi totam ad nam velit quasi quidem aspernatur.
+
+                            <p className="text-md text-yellow-700 tracking-wide leading-5 font-sans">
+                                Skip the wait and enjoy your favorite dishes from Al Diwan at your convenience!<br/> <br/>We've got you covered with fast, fresh, and flavorful meals!!
                             </p>
+
                             <div className="flex gap-6 dark:text-white">
                                 <div>
                                     <GrSecure className="text-4xl h-20 w-20 shadow-sm p-5 rounded-full bg-violet-100 dark:bg-violet-400 " />
@@ -58,7 +54,7 @@ export default function Banner() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
             </div>
         </>

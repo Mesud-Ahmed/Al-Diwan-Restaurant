@@ -41,18 +41,17 @@ export default function Hero() {
                     <div className="grid grid-cols-1 sm:grid-cols-2">
                         {/* text content section */}
                         <div
-                            
+
                             className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1">
                             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
-                                Welcome{" "}
-                                <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">
-                                    Foodie
+                                Welcome to {" "}
+                                <span class="whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">
+                                    Al Diwan
                                 </span>{" "}
-                                Zone
+                                restaurant
                             </h1>
-                            <p className="text-sm ">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
-                                reiciendis inventore iste ratione ex alias quis magni at optio
+                            <p className="text-md font-serif italic tracking-wide text-gray-700 dark:text-gray-300 drop-shadow-lg bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                                Where we bring you handcrafted dishes made with the finest ingredients and an unforgettable dining experience!!
                             </p>
                             <div>
                                 <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
@@ -64,17 +63,17 @@ export default function Hero() {
                         <div className="min-h-[450px] sm:min-h-[450px] flex justify-center items-center relative order-1 sm:order-2 ">
                             <div className="h-[300px] sm:h-[450px] overflow-hidden flex justify-center items-center">
                                 <motion.img
-                                    
+
                                     src={imageId}
                                     alt="biryani img"
                                     className="w-[300px] sm:w-[450px] sm:scale-125 mx-auto "
                                     animate={{
-                                        rotate:360,
+                                        rotate: 360,
                                     }}
                                     transition={{
-                                        duration:40,
-                                        repeat:Infinity,
-                                        ease:'linear'
+                                        duration: 40,
+                                        repeat: Infinity,
+                                        ease: 'linear'
                                     }}
                                 />
                             </div>
@@ -82,8 +81,8 @@ export default function Hero() {
                                 {ImageList.map((item) => (
                                     <img
                                         key={item.id}
-                                        
-                                        
+
+
                                         src={item.img}
                                         onClick={() => {
                                             setImageId(

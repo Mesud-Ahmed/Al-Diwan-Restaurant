@@ -10,7 +10,7 @@ export default function Navbar() {
                         <div>
                             <a href="#" className='flex items-center gap-2 text-2xl sm:text-3xl font-bold'>
                                 <img src={logo} alt="logo" className='w-10'/>
-                                Al-Diwan
+                                مطعم الديوان
                             </a>
                         </div>
                         <div className='flex items-center gap-4'>
