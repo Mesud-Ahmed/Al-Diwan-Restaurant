@@ -1,7 +1,7 @@
 import BiryaniImg1 from "../assets/biryani3.png";
 import BiryaniImg2 from "../assets/biryani5.png";
 import BiryaniImg3 from "../assets/biryani2.png";
-
+import { motion } from "motion/react"
 
 const ServicesData = [
     {
@@ -41,11 +41,16 @@ export default function Services() {
                             Perspiciatis delectus architecto error nesciunt,
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-5 place-items-center">
+                    <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-14 md:gap-5 place-items-center"
+                        initial={{ opacity: 0, y: 500 }} // Starts hidden, moved down
+                        animate={{ opacity: 1, y: 0 }} // Fades in and moves up
+                        transition={{ duration: 0.6, ease: "easeOut" }} // Smooth animation
+
+                    >
+
                         {ServicesData.map((service) => (
                             <div
-                                data-aos="zoom-in"
-                                data-aos-duration="300"
+
                                 className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]"
                             >
                                 <div className="h-[100px]">
@@ -65,8 +70,8 @@ export default function Services() {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                    
+                    </motion.div>
+
                 </div>
             </div>
         </>
