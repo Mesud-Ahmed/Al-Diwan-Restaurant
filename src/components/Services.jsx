@@ -1,7 +1,7 @@
 import BiryaniImg1 from "../assets/biryani3.png";
 import BiryaniImg2 from "../assets/biryani5.png";
 import BiryaniImg3 from "../assets/biryani2.png";
-import { span } from "framer-motion/client";
+
 
 const ServicesData = [
     {
