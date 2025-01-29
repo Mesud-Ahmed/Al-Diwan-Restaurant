@@ -10,9 +10,7 @@ export default {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
-      animation: {
-        "spin-slow": "spin 40s linear infinite",
-      },
+      
       container: {
         center: true,
         padding: {
